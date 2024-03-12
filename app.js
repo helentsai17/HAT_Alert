@@ -9,15 +9,29 @@ const app = express();
 const date = new Date();
 console.log(`This is console on ${date}`);
 console.log('================================================');
-ExcerciseDiaryAlert();
+// ExcerciseDiaryAlert();
 
 
-// const cronJob = cron.schedule('0 2 * * *', async () => {
-//   console.log('Running a task');
-//   ExcerciseDiaryAlert();
-// });
+const cronJobEeveryDay = cron.schedule('0 2 * * *', async () => {
+  console.log('Running days');
+  ExcerciseDiaryAlert();
+});
 
-// cronJob.start();
+cronJobEeveryDay.start();
+
+const cronJobEveryWeek = cron.schedule('0 3 1 * *', async () => {
+  console.log('Running weeks');
+  ExcerciseDiaryAlert();
+});
+
+cronJobEveryWeek.start();
+
+const cronJobEveryMonth = cron.schedule('0 4 * * 0', async () => {
+  console.log('Running a month');
+  ExcerciseDiaryAlert();
+});
+
+cronJobEveryMonth.start();
 
 /**
  * Initialize Server
