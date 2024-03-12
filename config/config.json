@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "chief",
+    "password": "copd",
+    "database": "chief_pr",
+    "host": "LAPTOP-PRQF4LD8\\SQLEXPRESS",
+    "dialect": "mssql"
+  }
+}
