@@ -15,7 +15,8 @@ module.exports = (sequelize, DataTypes) => {
   }
   Patient_Exercise_Diary_Detail.init({
     PATIENT_EXERCISE_DIARY_DETAIL_ID: {
-      type:DataTypes.INTEGER
+      type:DataTypes.INTEGER,
+      primaryKey:true
     },
     PATIENT_EXERCISE_DIARY_ID: {
       type:DataTypes.INTEGER

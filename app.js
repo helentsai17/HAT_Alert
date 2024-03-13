@@ -9,7 +9,7 @@ const app = express();
 const date = new Date();
 console.log(`This is console on ${date}`);
 console.log('================================================');
-// ExcerciseDiaryAlert();
+ExcerciseDiaryAlert();
 
 
 const cronJobEeveryDay = cron.schedule('0 2 * * *', async () => {

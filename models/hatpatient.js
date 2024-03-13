@@ -9,6 +9,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       this.belongsTo(models.HAT_Alert_Setup, { foreignKey: 'Patient_ID', as:'HAT_alert_setup' })
+      this.hasOne(models.ViewPatientExercisePlan, { foreignKey: 'Patient_ID' , as:'ViewPatientExercisePlan'})
+      
     }
   }
   HatPatient.init(
